@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: 0px;
+  ul,
+  ol {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+:root {
+  /* COLORS */
+  --rtc-background-header: #2c2c2c;
+  --rtc-background-filter-menu: #f1f1f1;
+  --rtc-background-main: #ffffff;
+  --rtc-background-footer: #000000;
+  --rtc-background-shoes: #f1f1f1;
+  --rtc-background-select: #fff852;
+  --rtc-border: #c8c3c3;
+  /* SPACING */
+  --rtc-padding-xs: 10px;
+  --rtc-padding-s: 20px;
+  --rtc-padding-m: 30px;
+  --rtc-padding-l: 40px;
+
+  --rtc-margin-xs: 10px;
+  --rtc-margin-s: 20px;
+  --rtc-margin-m: 30px;
+  --rtc-margin-l: 40px;
+
+  --rtc-gap-xs: 10px;
+  --rtc-gap-s: 20px;
+  --rtc-gap-m: 30px;
+  --rtc-gap-l: 40px;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+#zapatillas {
+  margin: var(--rtc-margin-l);
+}
+#zapatillas > div {
+  flex-direction: column;
+  width: 322px;
+  border: var(--rtc-border) 0, 5px solid;
+  -webkit-box-shadow: 0px 1px 5px 3px rgba(173, 164, 173, 0.65);
+  -moz-box-shadow: 0px 1px 5px 3px rgba(173, 164, 173, 0.65);
+  box-shadow: 0px 1px 5px 3px rgba(173, 164, 173, 0.65);
+}
+
+.imgContainer {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
