@@ -250,14 +250,27 @@ const filtrarZapas = () => {
       (modelo === '' || zapa.modelo.toLowerCase().includes(modelo))
     )
   })
-  printZapas(zapasFiltradas)
+
+  let zapasSugeridas = zapasFiltradas
+
+  if (zapasFiltradas.length === 0) {
+    alert('No se encuentra el producto, te sugerimos estas:')
+    zapasSugeridas = getRandomZapatillas(3)
+  }
+  printZapas(zapasSugeridas)
 }
+
 document.querySelector('.buscarBtn').addEventListener('click', filtrarZapas)
 document.querySelector('.limpiarBtn').addEventListener('click', () => {
   document.querySelector('.filtroMarca').value = ''
   document.querySelector('.filtroModelo').value = ''
   printZapas(ZAPATILLAS)
 })
+
+const getRandomZapatillas = (count) => {
+  const shuffled = [...ZAPATILLAS].sort(() => 0.5 - Math.random())
+  return shuffled.slice(0, count)
+}
 
 const printZapas = (zapas) => {
   const divZapas = document.querySelector('#zapatillas')
